@@ -1,0 +1,15 @@
+.search {
+	height: 40px;
+	border-radius: 50px;
+	text-indent: 24px;
+	background: none;
+	border: 1.5px solid #c2beda;
+}
+
+.search:focus {
+	outline: none;
+}
+
+.search::placeholder {
+	color: #94959f;
+}

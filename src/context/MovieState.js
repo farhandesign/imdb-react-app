@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
-import AuthContext from './auth-context';
+import React, { useState, useMemo } from 'react';
+import MovieContext from './movie-context';
 
 const AuthState = (props) => {
-	const [ user, setUser ] = useState(null);
-	const value = useMemo(() => ({ user, setUser }), [ user, setUser ]);
+	const [ movies, setMovies ] = useState('');
+	const value = useMemo(() => ({ movies, setMovies }), [ movies, setMovies ]);
 
-	return <AuthContext.Provider value={value}>{props.children}</AuthContext.Provider>;
+	return <MovieContext.Provider value={value}>{props.children}</MovieContext.Provider>;
 };
 
 export default AuthState;
